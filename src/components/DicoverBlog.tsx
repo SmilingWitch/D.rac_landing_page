@@ -1,4 +1,5 @@
 import BlogCard from "./blogCard";
+import BlogCarousel from "./BlogCarousel";
 
 export default function DiscoverBlog(){
     return(
@@ -11,7 +12,24 @@ export default function DiscoverBlog(){
                         <span className="text-[1.5rem]">Stay up-to-date with the latest trends, analysis, and industry news.</span>
                     </div>
                     
-                    <BlogCard/>
+                    <BlogCarousel/>
+
+                    <div className="text-[1.2rem] w-[70%]">
+                        <span>On our blog, you'll find relevant information on all kinds of events: from festivals and conferences to product launches and brand experiences. We analyze the market, explore notable occurrences, and tell you what's on everyone's radar</span>
+                    </div>
+
+                    <div className="w-full p-[50px] flex flex-col justify-center items-center mt-[20]">
+                        <span className=" text-[1.2rem]">
+                            Interested in learning more?
+                        </span>
+
+                        <div className=" pt-[20px] flex flex-col justify-center items-center">
+                            <h2 className=" text-[1.7rem] ">
+                                Discover our articles
+                            </h2>
+                            <button className="rounded-[5] border-2 border-[#FFFF00] pl-[35] pr-[35] pt-[5] pb-[5] mt-[10]">Blog</button>
+                        </div>
+                    </div>
                     
                     
         
