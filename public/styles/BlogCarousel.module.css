@@ -1,0 +1,85 @@
+.home{
+    position: relative;
+    width: 100%;
+    padding-bottom: 50px;
+    margin-top: 30px;
+    
+}
+
+.icon{
+    color: black;
+}
+.card_container{
+    padding: 50px;
+    display: flex;
+}
+.embla {
+  position: relative;
+  overflow: hidden;
+  padding: 0.25rem 0; /* un poco de respiro */
+  margin-left: 5%;
+ 
+  
+}
+
+/* Track */
+.embla__container {
+  display: flex;
+  gap: 40px;              /* espacio entre tarjetas */
+  will-change: transform; /* suaviza animación */
+  padding-bottom: 20px;
+  padding-top: 20px;
+  
+}
+
+/* Slides responsivos:
+   - móvil: 85% del ancho (1.x por vista, tipo carrusel)
+   - md: 50% (2 por vista)
+   - lg: 33.333% (3 por vista) */
+.embla__slide {
+    
+    flex-grow: 0;     /* el slide NO crece más del tamaño indicado */
+    /*flex-shrink: 0; */  /* el slide NO se encoge más del tamaño indicado */
+    /*flex-basis: 85%;*/  /* el slide ocupa el 85% del ancho del contenedor */
+}
+
+@media (min-width: 768px) {
+  .embla__slide { flex-basis: 50%; }
+}
+
+@media (min-width: 1024px) {
+  .embla__slide { flex-basis: 33.333%; }
+}
+
+/* Flechas */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 0;
+  background: rgba(193, 190, 190, 0.5);
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  font-size: 30px;
+
+}
+.arrow:hover{
+    transition: all 0.3s ease-in-out;
+    background: rgba(86, 85, 85, 0.5);
+}
+.arrowLeft { 
+    left: 8px; 
+}
+.arrowRight { 
+    right: 8px; 
+}
+.arrow:active { 
+    transform: translateY(-50%) scale(0.98); 
+}
+
+
