@@ -1,7 +1,9 @@
 import BuyingSellingDetails from "@/components/buyingSellingDetails";
 import DiscoverBlog from "@/components/DicoverBlog";
+import DiscoverForum from "@/components/DiscoverForum";
 import PilotUser from "@/components/pilotUser";
 import PrincipalView from "@/components/principalView";
+import SocialMedia from "@/components/socialMedia";
 
 
 export default function Home() {
@@ -11,6 +13,8 @@ export default function Home() {
       <BuyingSellingDetails/>
       <PilotUser/>
       <DiscoverBlog/>
+      <DiscoverForum/>
+      <SocialMedia/>
     </div>
   );
 }
