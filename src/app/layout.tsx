@@ -1,15 +1,19 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Barlow_Semi_Condensed, Nunito } from "next/font/google";
 import "./globals.css";
+import Navbar from "../components/navbar"; // 👈 importa tu navbar
+import SocialMedia from "@/components/socialMedia";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const barlow = Barlow_Semi_Condensed({
   subsets: ["latin"],
+  weight: ["400", "600", "700"],
+  variable: "--font-barlow",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const nunito = Nunito({
   subsets: ["latin"],
+  weight: ["400", "600", "700"],
+  variable: "--font-nunito",
 });
 
 export const metadata: Metadata = {
@@ -19,15 +23,15 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <body className={`${nunito.variable} ${barlow.variable} antialiased`}>
+        <Navbar /> 
+        <main>{children}</main> {/* deja espacio para el navbar */}
+        <SocialMedia/>
       </body>
     </html>
   );
