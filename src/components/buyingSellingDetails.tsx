@@ -14,8 +14,13 @@ export default function BuyingSellingDetails(){
 
     return(
         <div  className="w-full flex flex-col justify-center bg-[#121314] p-[100]">
-            <div className="w-full flex justify-center pb-20 text-[2.5rem]">
-                <h2>Buying and Selling Event Tickets Has Never Been So Fun!</h2>
+            <div className="w-full flex justify-center pb-20 text-[2.5rem] ">
+                <h2 className="font-extrabold shadow-[0_8px_10px_#ffff00] pb-1 rounded-[30]">Buying and Selling Event{" "} 
+                    <span className="text-[#FFFF00]" style={{ fontFamily: 'var(--font-barlow)' }}>Tickets{" "}</span> 
+                    Has Never Been So {" "}
+                    <span className="text-[#FFFF00]" style={{ fontFamily: 'var(--font-barlow)' }}>Fun!</span>
+                </h2>
+                
             </div>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-20 place-items-center p-20">

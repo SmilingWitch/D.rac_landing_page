@@ -15,23 +15,24 @@ export default function SocialMedia(){
                 height={100}
             ></Image>
             <div className="flex gap-[30]">
-                <span className="text-[1.5rem]">F.A.Q</span>
-                <span className="text-[1.5rem]">About us</span>
-                <span className="text-[1.5rem]">Blog</span>
-                <span className="text-[1.5rem]">Forum</span>
-                <span className="text-[1.5rem]">E-mail us</span>
+                <span className="text-[1.5rem] cursor-pointer">F.A.Q</span>
+                <span className="text-[1.5rem] cursor-pointer">About us</span>
+                <span className="text-[1.5rem] cursor-pointer">Blog</span>
+                <span className="text-[1.5rem] cursor-pointer">Forum</span>
+                <span className="text-[1.5rem] cursor-pointer">E-mail us</span>
             </div>
             <div className="flex gap-[20] text-[2.5rem] ">
-                <div className="text-[#121314] bg-[#BDBBBB] w-15 h-15 rounded-[50%] flex items-center justify-center">
+                <div className="cursor-pointer text-[#121314] bg-[#BDBBBB] w-15 h-15 rounded-[50%] flex items-center justify-center">
                     <IoLogoInstagram/>
                 </div>
-                <div className="text-[#121314] bg-[#BDBBBB] w-15 h-15 rounded-[50%] flex items-center justify-center">
+                <div className="cursor-pointer text-[#121314] bg-[#BDBBBB] w-15 h-15 rounded-[50%] flex items-center justify-center">
                     <FaFacebookF/>
                 </div>
-                <div className="text-[#121314] bg-[#BDBBBB] w-15 h-15 rounded-[50%] flex items-center justify-center">
+                <div className="cursor-pointer text-[#121314] bg-[#BDBBBB] w-15 h-15 rounded-[50%] flex items-center justify-center">
                     <FaLinkedinIn/>
                 </div>
             </div>
+            <span className="pt-[20px] text-[#BDBBBB] text-[1.2em] ">Copyright 2025</span>
         </div>
     )
 }
