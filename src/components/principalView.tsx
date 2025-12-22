@@ -3,6 +3,7 @@ import Elipse from "../../public/Ellipse 5.svg";
 import Elipse1 from "../../public/Ellipse 6.svg";
 import Elipse2 from "../../public/Ellipse 7.svg";
 import Image from "next/image";
+import SubscribeButton from "./subscribeButton";
 
 export default function PrincipalView() {
   return (
@@ -94,15 +95,7 @@ export default function PrincipalView() {
 
         <div className="pt-[20px] flex flex-col">
           <span className="text-[1.5rem]">Be the first to explore!</span>
-          <button
-            className="
-              font-bold bg-[#FFFF00] text-black
-              w-[100px] rounded-[5px] p-[5px] mt-5 cursor-pointer
-              hover:brightness-95 active:scale-[0.98] transition
-            "
-          >
-            Subscribe
-          </button>
+          <SubscribeButton/>
         </div>
       </div>
     </div>
