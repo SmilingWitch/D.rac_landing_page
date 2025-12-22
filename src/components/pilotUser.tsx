@@ -1,5 +1,6 @@
 import Image from "next/image";
 import image from "../../public/Rectangle 63.svg"
+import SubscribeButton from "./subscribeButton";
 
 
 
@@ -115,7 +116,7 @@ export default function PilotUser(){
                             ">
                                 Register now and secure your spot in this select club!
                             </span>
-                            <button className="font-bold bg-[#FFFF00] pl-5 pr-5 pt-3 pb-3  text-black rounded-[5] cursor-pointer">Subscribe</button>
+                            <SubscribeButton/>
                         </div>
                     </div>
                     <div className="relative w-[90vw] h-[40vh] z-[1] bg-blue-500 
