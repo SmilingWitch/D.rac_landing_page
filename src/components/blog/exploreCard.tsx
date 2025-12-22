@@ -11,9 +11,9 @@ export default function ExploreCard(){
             </div>
             
             <div className="flex flex-col gap-[5px]  p-[10px] relative">
-                <div>
-                    <span>Comedy</span>
-                    <span>2 days ago</span>
+                <div className="flex justify-between">
+                    <span className="text-[0.8rem] bg-gray-600 rounded-[5px] px-[15px] py-[3px] flex justify-center items-center">Comedy</span>
+                    <span className="text-[0.8rem]">2 days ago</span>
                 </div>
                 <div className="flex flex-col gap-[15px] relative">
                     <span className="relative font-bold
