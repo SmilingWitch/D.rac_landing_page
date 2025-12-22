@@ -26,29 +26,6 @@ export default function Principal() {
         <h1 className="font-bold w-full text-[2rem] md:text-[2rem] lg:text-[3vw] 2xl:text-[3vw]">
           Blog
         </h1>
-
-        <div className="pt-[20px] flex flex-col">
-          <span className="text-[1.5rem] w-[60%]">
-            Connect with others, share your ideas, read the latest announcements and find your answers
-          </span>
-        </div>
-        <div>
-            <SearchFilter data={SEARCH_DATA} categories={CATEGORIES} onResults={setResults} />
-        </div>
-
-        
-
-        {/* ✅ Solo para que veas que results cambia (puedes borrar luego) */}
-        {/*<div className="mt-6 text-white/90">
-          <div className="text-sm text-white/60">Results: {results.length}</div>
-          <ul className="list-disc pl-5">
-            {results.map((r) => (
-              <li key={r.id}>
-                {r.title} <span className="text-white/60">({r.category})</span>
-              </li>
-            ))}
-          </ul>
-        </div>*/}
       </div>
     </div>
   );
