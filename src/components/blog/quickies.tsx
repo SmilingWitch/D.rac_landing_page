@@ -26,8 +26,13 @@ export default function Quickies(){
                     <FaArrowRight/>
                 </div>
             </div>
-            <div className="flex justify-center">
-                <div className="w-[50%]">
+            <div className="relative flex-col flex justify-center gap-[40px]
+                            sm:flex-col
+                            lg:flex-row
+                            xl:flex-row">
+                <div className="relative 
+                                sm:w-full
+                                lg:w-[70%]">
                     <TrendingCarrousel
                     items={events}
                     Card={QuickiesCarrouselCard}
@@ -35,7 +40,9 @@ export default function Quickies(){
 
                 </div>
                 
-                <div className="flex flex-col gap-[10px]">
+                <div className="flex flex-col gap-[10px] items-center p-[20px] justify-between 
+                                sm:flex-row sm:justify-center
+                                lg:flex-col">
                     <QuickiesCard/>
                     <QuickiesCard/>
                     <QuickiesCard/>
