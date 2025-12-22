@@ -7,7 +7,7 @@ import icon from "../../../public/userIcon.svg"
 export default function CarrouselCard(){
 
     return(
-        <div className=" flex flex-row w-[60vw] h-[50vh] rounded-[20] relative overflow-hidden items-end
+        <div className="flex flex-row w-[60vw] h-[50vh] rounded-[20] relative overflow-hidden items-end
                         sm:w-[40vw] sm:h-[50vh]
                         lg:w-[40vw] lg:h-[40vh]
                         xl:w-[30vw] xl:h-[40vh]
@@ -23,7 +23,7 @@ export default function CarrouselCard(){
 
             </div>
             
-            <div className="flex flex-col justify-between items-end h-full p-[15px] w-full absolute pb-[50px]">
+            <div className="flex flex-col justify-between items-start h-full p-[15px] w-full absolute pb-[50px] ">
                 <div className="bg-gray-600 rounded-[5px] px-[15px] py-[3px] flex justify-center items-center">
                     <span className="text-[0.8rem]">label</span>
                 </div>
