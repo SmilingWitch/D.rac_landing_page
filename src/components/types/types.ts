@@ -4,3 +4,10 @@ export default interface DetailsCardProps {
   header: string
   text: string;  // texto que acompañará la imagen
 }
+
+export interface CategoryCardProps {
+  src: string;
+  name: string;
+  text: string;
+  number: number;
+};
