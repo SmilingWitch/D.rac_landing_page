@@ -9,7 +9,7 @@ import { ComponentType, useCallback, useEffect, useRef, useState } from "react";
 
 type TrendingCarrouselProps<T> = {
   items: T[];
-  Card: ComponentType<T>;
+  Card: ComponentType;
 };
 
 
@@ -50,7 +50,7 @@ export default function TrendingCarrousel<T>({
         <div className={style.embla__container}>
           {items.map((e, i) => (
             <div className={style.embla__slide} key={i}>
-              <Card {...e} />
+              <Card/>
             </div>
           ))}
         </div>
