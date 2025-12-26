@@ -39,17 +39,28 @@ export default function TrendingCarrousel<T>({
    }, [emblaApi])
  
    useEffect(() => {
-     if (!emblaApi) return
- 
-     setScrollSnaps(emblaApi.scrollSnapList())
-     updateUI()
- 
-     emblaApi.on("select", updateUI)
-     emblaApi.on("reInit", () => {
-       setScrollSnaps(emblaApi.scrollSnapList())
-       updateUI()
-     })
-   }, [emblaApi, updateUI])
+  if (!emblaApi) return
+
+  const onReInit = () => {
+    setScrollSnaps(emblaApi.scrollSnapList())
+    updateUI()
+  }
+
+  const onSelect = () => {
+    updateUI()
+  }
+
+  onReInit()
+
+  emblaApi.on("reInit", onReInit)
+  emblaApi.on("select", onSelect)
+
+  return () => {
+    emblaApi.off("reInit", onReInit)
+    emblaApi.off("select", onSelect)
+  }
+}, [emblaApi, updateUI])
+
 
   const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi])
   const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi])

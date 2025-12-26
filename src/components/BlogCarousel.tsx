@@ -4,7 +4,6 @@ import style from "../../public/styles/BlogCarousel.module.css"
 import useEmblaCarousel from "embla-carousel-react"
 import type { EmblaOptionsType } from "embla-carousel"
 import { useCallback, useEffect, useState } from "react"
-import ForumCard from "./forumCard"
 import BlogCard from "./blogCard"
 
 const events = [
@@ -42,17 +41,28 @@ export default function ForumCarousel() {
   }, [emblaApi])
 
   useEffect(() => {
-    if (!emblaApi) return
+  if (!emblaApi) return
 
+  const onReInit = () => {
     setScrollSnaps(emblaApi.scrollSnapList())
     updateUI()
+  }
 
-    emblaApi.on("select", updateUI)
-    emblaApi.on("reInit", () => {
-      setScrollSnaps(emblaApi.scrollSnapList())
-      updateUI()
-    })
-  }, [emblaApi, updateUI])
+  const onSelect = () => {
+    updateUI()
+  }
+
+  onReInit()
+
+  emblaApi.on("reInit", onReInit)
+  emblaApi.on("select", onSelect)
+
+  return () => {
+    emblaApi.off("reInit", onReInit)
+    emblaApi.off("select", onSelect)
+  }
+}, [emblaApi, updateUI])
+
 
   const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi])
   const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi])
