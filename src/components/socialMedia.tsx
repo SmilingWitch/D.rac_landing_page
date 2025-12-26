@@ -14,25 +14,41 @@ export default function SocialMedia(){
                 width={100}
                 height={100}
             ></Image>
-            <div className="flex gap-[30]">
-                <span className="text-[1.5rem] cursor-pointer">F.A.Q</span>
-                <span className="text-[1.5rem] cursor-pointer">About us</span>
-                <span className="text-[1.5rem] cursor-pointer">Blog</span>
-                <span className="text-[1.5rem] cursor-pointer">Forum</span>
-                <span className="text-[1.5rem] cursor-pointer">E-mail us</span>
+            <div className="flex gap-[20px] text-[1rem]
+                            lg:text-[1.2rem]
+                            xl:text-[1.5rem] xl:gap-[30px]">
+                <span className="cursor-pointer hover:text-[#ffff00]">F.A.Q</span>
+                <span className="cursor-pointer hover:text-[#ffff00]">About us</span>
+                <span className="cursor-pointer hover:text-[#ffff00]">Blog</span>
+                <span className="cursor-pointer hover:text-[#ffff00]">Forum</span>
+                <span className="cursor-pointer hover:text-[#ffff00]">E-mail us</span>
             </div>
-            <div className="flex gap-[20] text-[2.5rem] ">
-                <div className="cursor-pointer text-[#121314] bg-[#BDBBBB] w-15 h-15 rounded-[50%] flex items-center justify-center">
-                    <IoLogoInstagram/>
+            <div className="flex gap-[20] text-[2.5rem]">
+                <div className="cursor-pointer text-[#121314] bg-[#BDBBBB] w-10 h-10 rounded-[50%] flex items-center justify-center 
+                                sm:w-10 sm:h-10 
+                                lg:w-15 lg:h-15">
+                    <IoLogoInstagram className="text-[1.8rem]
+                                    sm:text-[2rem]
+                                    lg:text-[2.5rem]"/>
                 </div>
-                <div className="cursor-pointer text-[#121314] bg-[#BDBBBB] w-15 h-15 rounded-[50%] flex items-center justify-center">
-                    <FaFacebookF/>
+                <div className="cursor-pointer text-[#121314] bg-[#BDBBBB] w-10 h-10 rounded-[50%] flex items-center justify-center
+                                sm:w-10 sm:h-10 
+                                lg:w-15 lg:h-15">
+                    <FaFacebookF className="text-[1.8rem]  
+                                    sm:text-[2rem]
+                                    lg:text-[2.5rem]"/>
                 </div>
-                <div className="cursor-pointer text-[#121314] bg-[#BDBBBB] w-15 h-15 rounded-[50%] flex items-center justify-center">
-                    <FaLinkedinIn/>
+                <div className="cursor-pointer text-[#121314] bg-[#BDBBBB] w-10 h-10 rounded-[50%] flex items-center justify-center
+                                sm:w-10 sm:h-10 
+                                lg:w-15 lg:h-15">
+                    <FaLinkedinIn className="text-[1.8rem]
+                                    sm:text-[2rem]
+                                    lg:text-[2.5rem]"/>
                 </div>
             </div>
-            <span className="pt-[20px] text-[#BDBBBB] text-[1.2em] ">Copyright 2025</span>
+            <span className="pt-[20px] text-[#BDBBBB] text-[0.8em] 
+                                sm:text-[1em]
+                                lg:text-[1.2em]">Copyright 2025</span>
         </div>
     )
 }
