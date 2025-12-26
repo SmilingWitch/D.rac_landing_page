@@ -5,13 +5,13 @@ import Elipse2 from "../../public/Ellipse 7.svg";
 import Image from "next/image";
 import SubscribeButton from "./subscribeButton";
 
+
 export default function PrincipalView() {
   return (
-    <div
-      className="
-        relative w-full h-[calc(100vh-70px)] bg-[#121314]
+    <div className="
+        relative w-full h-[calc(100vh-70px)] 
         flex flex-col justify-center
-        p-[50px] lg:p-[100px] overflow-hidden
+        p-[50px] lg:p-[100px] overflow-hidden bg-[#121314]
       "
     >
       {/* Fondos decorativos */}
@@ -60,7 +60,7 @@ export default function PrincipalView() {
       {/* Contenido principal */}
       <div
         className="
-          relative z-[9999] h-full
+          relative  h-full
           w-full md:w-full lg:w-[70%]
           flex flex-col justify-center items-start
           gap-[30px]
