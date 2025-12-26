@@ -4,13 +4,7 @@ import Image from "next/image";
 import MyLogo from "../../../public/logo.svg";
 import image from "../../../public/principalBlog.svg";
 
-import SearchFilter from "../searchFilter";
-import { useState } from "react";
-import { SEARCH_DATA, CATEGORIES } from "../../data/events";
-import type { SearchItem } from "../../data/events";
-
 export default function Principal() {
-  const [results, setResults] = useState<SearchItem[]>(SEARCH_DATA);
 
   return (
     <div className="w-full relative">
