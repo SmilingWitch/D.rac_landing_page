@@ -1,3 +1,4 @@
+import Link from "next/link";
 import BlogCarousel from "./BlogCarousel";
 
 export default function DiscoverBlog(){
@@ -35,7 +36,10 @@ export default function DiscoverBlog(){
                                             2xl:text-[1.7rem]">
                                 Discover our articles
                             </h2>
-                            <button className="font-bold rounded-[5] border-3 border-[#FFFF00] pl-[35] pr-[35] pt-[5] pb-[5] mt-[10]">Blog</button>
+                            <Link href="/blog">
+                                <button className="cursor-pointer font-bold rounded-[5] border-3 border-[#FFFF00] pl-[35] pr-[35] pt-[5] pb-[5] mt-[10]">Blog</button>
+                            </Link>
+                            
                         </div>
                     </div>
                     
