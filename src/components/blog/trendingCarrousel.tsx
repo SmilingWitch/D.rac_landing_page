@@ -26,23 +26,33 @@ export default function TrendingCarrousel<T>({
   const [canScrollPrev, setCanScrollPrev] = useState(false);
   const [canScrollNext, setCanScrollNext] = useState(false);
 
-  // Actualiza las flechas según la posición
-  const updateButtons = useCallback(() => {
-    if (!emblaApi) return;
-    setCanScrollPrev(emblaApi.canScrollPrev());
-    setCanScrollNext(emblaApi.canScrollNext());
-  }, [emblaApi]);
+    // dots
+  const [selectedIndex, setSelectedIndex] = useState(0)
+  const [scrollSnaps, setScrollSnaps] = useState<number[]>([])
+  
+ const updateUI = useCallback(() => {
+     if (!emblaApi) return
+     setCanScrollPrev(emblaApi.canScrollPrev())
+     setCanScrollNext(emblaApi.canScrollNext())
+     setSelectedIndex(emblaApi.selectedScrollSnap())
+   }, [emblaApi])
+ 
+   useEffect(() => {
+     if (!emblaApi) return
+ 
+     setScrollSnaps(emblaApi.scrollSnapList())
+     updateUI()
+ 
+     emblaApi.on("select", updateUI)
+     emblaApi.on("reInit", () => {
+       setScrollSnaps(emblaApi.scrollSnapList())
+       updateUI()
+     })
+   }, [emblaApi, updateUI])
 
-  // Conecta los eventos de Embla
-  useEffect(() => {
-    if (!emblaApi) return;
-    updateButtons();
-    emblaApi.on("select", updateButtons);
-    emblaApi.on("reInit", updateButtons);
-  }, [emblaApi, updateButtons]);
-
-  const scrollPrev = useCallback(() => emblaApi && emblaApi.scrollPrev(), [emblaApi]);
-  const scrollNext = useCallback(() => emblaApi && emblaApi.scrollNext(), [emblaApi]);
+  const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi])
+  const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi])
+  const scrollTo = useCallback((index: number) => emblaApi?.scrollTo(index), [emblaApi])
 
   return (
     <div className={style.home}>
@@ -60,7 +70,7 @@ export default function TrendingCarrousel<T>({
         {canScrollPrev && (
           <button
             aria-label="Prev"
-            className={`${style.arrow} ${style.arrowLeft}`}
+            className={`${style.arrow} ${style.arrowLeft} hidden md:flex md:items-center md:justify-center`}
             onClick={scrollPrev}
           >
             ‹
@@ -69,12 +79,27 @@ export default function TrendingCarrousel<T>({
         {canScrollNext && (
           <button
             aria-label="Next"
-            className={`${style.arrow} ${style.arrowRight}`}
+            className={`${style.arrow} ${style.arrowRight} hidden md:flex md:items-center md:justify-center`}
             onClick={scrollNext}
           >
             ›
           </button>
         )}
+        
+      </div>
+      {/* MOBILE: Dots (<md) */}
+      <div className="mt-4 flex items-center justify-center gap-2 md:hidden">
+        {scrollSnaps.map((_, index) => (
+          <button
+            key={index}
+            aria-label={`Go to slide ${index + 1}`}
+            onClick={() => scrollTo(index)}
+            className={[
+              "h-2 w-2 rounded-full transition-opacity",
+              index === selectedIndex ? "bg-white opacity-100" : "bg-white opacity-40",
+            ].join(" ")}
+          />
+        ))}
       </div>
     </div>
   );
