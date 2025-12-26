@@ -1,7 +1,8 @@
 "use client"
 
 import style from "../../public/styles/ForumCarousel.module.css"
-import useEmblaCarousel, { EmblaOptionsType } from "embla-carousel-react"
+import useEmblaCarousel from "embla-carousel-react"
+import type { EmblaOptionsType } from "embla-carousel"
 import { useCallback, useEffect, useState } from "react"
 import ForumCard from "./forumCard"
 

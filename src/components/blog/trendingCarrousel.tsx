@@ -2,7 +2,8 @@
 "use client";
 
 import style from "../../../public/styles/BlogCarousel.module.css";
-import useEmblaCarousel, { EmblaOptionsType } from "embla-carousel-react";
+import useEmblaCarousel from "embla-carousel-react"
+import type { EmblaOptionsType } from "embla-carousel"
 import { ComponentType, useCallback, useEffect, useRef, useState } from "react";
 
 
