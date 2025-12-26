@@ -6,7 +6,7 @@ import TopVoted from "@/components/forum/topVoted";
 
 export default function Forum() {
   return (
-    <div className="flex flex-col min-h-screen items-start justify-start bg-zinc-50 font-sans dark:bg-black">
+    <div className="relative flex flex-col min-h-screen items-start justify-start bg-zinc-50 font-sans dark:bg-black">
       <PrincipalForum/>
       <TopVoted/>
       <Categories/>
