@@ -6,7 +6,7 @@ import CardForum from "./forumCard";
 
 export default function LatestTopic(){
     return(
-        <div className="flex flex-col mt-[50px] w-full min-h-50vh min-h-[200vh]">
+        <div className="flex flex-col mt-[50px] w-full min-h-[150vh] mb-[50px]">
             <div className="flex items-center justify-center gap-[10] w-[300px] mb-[50px]">
                 <h2 className="relative font-bold 
                                 text-[2rem]
