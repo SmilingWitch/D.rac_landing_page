@@ -119,7 +119,7 @@ export default function PilotUser(){
                             <SubscribeButton/>
                         </div>
                     </div>
-                    <div className="relative w-[90vw] h-[40vh] z-[1] bg-blue-500 
+                    <div className="relative w-[90vw] h-[40vh] z-[1] 
                                     lg:w-[90vw] lg:h-[50vh]
                                     xl:w-[40vw] xl:h-[50vh]
                                     2xl:w-[40vw] 2xl:h-[50vh] ">
