@@ -1,6 +1,7 @@
 import Image from "next/image";
 import blog from "../../public/blogImage.svg"
 import ForumCarousel from "./ForumCarousel";
+import SubscribeButton from "./subscribeButton";
 
 
 export default function DiscoverForum(){
@@ -70,7 +71,7 @@ export default function DiscoverForum(){
 
                     </div>
                     <div className="p-[20px] h-[30%] flex flex-col gap-[20] w-[300px] right-0 relative 
-                                    lg:p-[50px]">
+                                    lg:p-[20px]">
                         <span className="   text-[1rem] font-bold
                                             sm:text-[1rem]
                                             md:text-[1.2rem]" style={{ fontFamily: 'var(--font-barlow)' }}>
@@ -84,9 +85,7 @@ export default function DiscoverForum(){
                                         xl:text-[1.7rem]">
                                 Join the conversation
                             </span>
-                            <button className=" font-bold bg-[#FFFF00] text-black w-[100] rounded-[5] p-[5] mt-5 cursor-pointer">
-                                Subscribe
-                            </button>
+                            <SubscribeButton/>
                         </div>
                         
                     </div>
