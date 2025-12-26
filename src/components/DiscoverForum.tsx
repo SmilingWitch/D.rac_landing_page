@@ -3,7 +3,7 @@ import blog from "../../public/blogImage.svg"
 import ForumCarousel from "./ForumCarousel";
 
 
-export default function DiscoverForum(){/*#191919*/
+export default function DiscoverForum(){
 
     return(
         <div className="pb-[100] w-full min-h-[150vh] flex flex-col justify-center items-start bg-[#121314]">
@@ -39,7 +39,7 @@ export default function DiscoverForum(){/*#191919*/
                     fill
                     className="object-cover"
                 ></Image>
-                <div className="absolute flex w-[100vw] justify-between items-end h-[100%]  flex-col w-[90vw]">
+                <div className="overflow-hidden absolute flex w-[100vw] justify-between items-end h-[100%]  flex-col w-[90vw]">
                     <div className="min-h-[200px] relative top-0  flex flex-col justify-center items-start gap-[20] p-[5px] right-20
                                         lg:p-[20px] w-[90vw]">
                         <ul className="text-[1.2rem] w-full ml-10
