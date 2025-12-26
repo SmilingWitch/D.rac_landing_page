@@ -11,7 +11,7 @@ export default function ForumCard(){
                                 xl:text-[1.5rem]  ">
                 I signed up for the beta and have been receiving exciting updates ever since. 
                 What excites me most is the variety of events they offer—much more than other apps! 
-                If they deliver on everything they promise, it's going to be a hit.
+                If they deliver on everything they promise, it&apos;s going to be a hit.
             </span>
             <div className="flex gap-[30px] items-center">
                 <div className="relative w-[70px] h-[70px] rounded-[50%] overflow-hidden

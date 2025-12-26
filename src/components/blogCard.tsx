@@ -25,7 +25,7 @@ export default function BlogCard(){
             <div className="flex flex-col justify-between items-end h-full p-[5] w-full ">
                 <div className="flex flex-col gap-[5] justify-center w-full relative">
                     <span className="text-[1.5rem] ">Alicia Alonso resurrects</span>
-                    <span className="w-full p-[7]">On our blog, you'll find relevant information on all kinds of events: from festivals and conferences to product launches and brand experiences. We analyze the market, explore notable occurrences, and tell you what's on everyone's rada</span>
+                    <span className="w-full p-[7]">On our blog, you&apos;ll find relevant information on all kinds of events: from festivals and conferences to product launches and brand experiences. We analyze the market, explore notable occurrences, and tell you what&apos;s on everyone&apos;s rada</span>
                 </div>
 
                 <button className="flex items-center justify-between w-[130] h-[50] pr-5 cursor-pointer">

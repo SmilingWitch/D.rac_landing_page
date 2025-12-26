@@ -27,7 +27,7 @@ export default function DiscoverForum(){
                     </span>
                     <span style={{ fontFamily: 'var(--font-barlow)' }}>
                         Join our forum and share your opinion on what works,
-                        what doesn't, and what audiences really want.
+                        what doesn&apos;t, and what audiences really want.
                     </span>
                     
                     

@@ -50,7 +50,8 @@ export default function PilotUser(){
                                     xl:text-[1.5rem]
                                     2xl:text-[2rem]
                                     ">
-                        <span>At D.rac, we're about to revolutionize event tickets market, and we want you to be part of this wave from the start. Now you can become a Pilot User of our app before its official launch.</span>
+                        <span>At D.rac, we&apos;re about to revolutionize event tickets market, and we want you to be part of this wave from the start. Now you can become a Pilot User of our app before its official launch.</span>
+
                     </div>
 
                     <div>
